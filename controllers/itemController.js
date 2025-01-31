@@ -1,6 +1,5 @@
 const Item = require('../models/Item');
 
-// Create an item
 exports.createItem = async (req, res) => {
   try {
     const { categoryId, subCategoryId, name, image, description, taxApplicable, tax, baseAmount, discount } = req.body;
@@ -14,7 +13,6 @@ exports.createItem = async (req, res) => {
   }
 };
 
-// Get all items
 exports.getItems = async (req, res) => {
   try {
     const items = await Item.find();
@@ -24,7 +22,6 @@ exports.getItems = async (req, res) => {
   }
 };
 
-// Get item by ID
 exports.getItemById = async (req, res) => {
   try {
     const item = await Item.findById(req.params.id);
@@ -36,7 +33,7 @@ exports.getItemById = async (req, res) => {
   }
 };
 
-// Search items by name
+// Search items by name, regex search
 exports.searchItems = async (req, res) => {
   try {
     const items = await Item.find({ name: { $regex: req.query.name, $options: 'i' } });
@@ -46,7 +43,6 @@ exports.searchItems = async (req, res) => {
   }
 };
 
-// Update an item
 exports.updateItem = async (req, res) => {
   try {
     const updatedItem = await Item.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -58,7 +54,6 @@ exports.updateItem = async (req, res) => {
   }
 };
 
-// Delete an item
 exports.deleteItem = async (req, res) => {
   try {
     await Item.findByIdAndDelete(req.params.id);
