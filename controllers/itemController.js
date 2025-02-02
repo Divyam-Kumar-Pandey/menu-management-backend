@@ -33,6 +33,24 @@ exports.getItemById = async (req, res) => {
   }
 };
 
+exports.getItemsByCategory = async (req, res) => {
+  try {
+    const items = await Item.find({ categoryId: req.params.categoryId });
+    res.status(200).json({ success: true, data: items });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+}; 
+
+exports.getItemsBySubCategory = async (req, res) => {
+  try {
+    const items = await Item.find({ subCategoryId: req.params.subCategoryId });
+    res.status(200).json({ success: true, data: items });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+
 // Search items by name, regex search
 exports.searchItems = async (req, res) => {
   try {
