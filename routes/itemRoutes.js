@@ -14,10 +14,10 @@ const router = express.Router();
 
 router.post('/', createItem);
 router.get('/', getItems);
+router.get('/search', searchItems); // this is placed above /:id to avoid conflict
 router.get('/:id', getItemById);
 router.get('/category/:categoryId', getItemsByCategory);
 router.get('/subcategory/:subCategoryId', getItemsBySubCategory);
-router.get('/search', searchItems);
 router.patch('/:id', updateItem);
 router.delete('/:id', deleteItem);
 
