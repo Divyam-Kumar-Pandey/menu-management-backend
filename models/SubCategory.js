@@ -10,9 +10,8 @@ const SubCategorySchema = new mongoose.Schema({
   tax: {
     type: Number,
     default: 0
-  },
-  timestamps: true
-});
+  }
+}, { timestamps: true });
 
 SubCategorySchema.pre("save", async function (next) {
   console.log("Pre save hook");
