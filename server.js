@@ -21,7 +21,7 @@ app.use('/api/v1/subcategories', subCategoryRoutes);
 app.use('/api/v1/items', itemRoutes);
 
 app.get('/', (req, res) => {
-  res.send('API is running...');
+  res.send('Welcome to the Menu Management API');
 });
 
 const PORT = process.env.PORT || 5000;

@@ -13,6 +13,14 @@ This is a menu management system for a restaurant. It allows you to create, read
 
 ## Installation
 
+Note: The project is hosted on AWS [Click here to visit](http://ec2-65-0-173-55.ap-south-1.compute.amazonaws.com/)
+    
+[Try this to get all the categories](http://ec2-65-0-173-55.ap-south-1.compute.amazonaws.com/api/v1/categories)
+
+[Try this to get all the subcategories](http://ec2-65-0-173-55.ap-south-1.compute.amazonaws.com/api/v1/subcategories)
+
+[Try this to get all the items](http://ec2-65-0-173-55.ap-south-1.compute.amazonaws.com/api/v1/items)
+
 1. Clone the repository
 `
 git clone https://github.com/Divyam-Kumar-Pandey/menu-management-backend.git
