@@ -30,4 +30,4 @@ jobs:
     - run: |
         touch .env
         echo "${{ secrets.PROD_ENV_FILE }}" > .env
-    - run: pm2 restart MenuManagementAPI
+    - run: /home/ubuntu/.nvm/versions/node/v20.18.2/bin/pm2 restart MenuManagementAPI
