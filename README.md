@@ -14,6 +14,7 @@ This is a menu management system for a restaurant. It allows you to create, read
 ## Installation
 
 Update: 23rd Feb 2025: AWS Server has been stopped.
+
 Note: The project is hosted on AWS [Click here to visit](http://ec2-65-0-173-55.ap-south-1.compute.amazonaws.com/)
     
 [Try this to get all the categories](http://ec2-65-0-173-55.ap-south-1.compute.amazonaws.com/api/v1/categories)
